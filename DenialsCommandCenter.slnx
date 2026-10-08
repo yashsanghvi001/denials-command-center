@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/DenialsCommandCenter.Api/DenialsCommandCenter.Api.csproj" />
+    <Project Path="src/DenialsCommandCenter.Domain/DenialsCommandCenter.Domain.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/DenialsCommandCenter.Tests/DenialsCommandCenter.Tests.csproj" />
+  </Folder>
+</Solution>

@@ -1,0 +1,41 @@
+claim_id,root_cause_category,owning_team,preventable_at_prebill
+GPP-2026-000230,Payer error,Denials (appeal),No
+GPP-2026-000234,Billing - timely filing,Billing,Yes
+GPP-2026-000454,Credentialing,Credentialing,Yes
+GPP-2026-000519,Medical necessity,Coding / Clinical,No
+GPP-2026-000551,Credentialing,Credentialing,Yes
+GPP-2026-000562,Authorization,Front desk / Authorization,Yes
+GPP-2026-000577,Credentialing,Credentialing,Yes
+GPP-2026-000645,Medical necessity,Coding / Clinical,No
+GPP-2026-000655,Payer error,Denials (appeal),No
+GPP-2026-000684,Coding - diagnosis,Coding,Yes
+GPP-2026-000743,Eligibility,Front desk / Eligibility,Yes
+GPP-2026-000763,Medical necessity,Coding / Clinical,No
+GPP-2026-000774,Medical necessity,Coding / Clinical,No
+GPP-2026-000777,Coding - diagnosis,Coding,Yes
+GPP-2026-000963,Eligibility,Front desk / Eligibility,Yes
+GPP-2026-001043,Coding - diagnosis,Coding,Yes
+GPP-2026-001146,Eligibility,Front desk / Eligibility,Yes
+GPP-2026-001490,Coding - modifier,Coding,Yes
+GPP-2026-001550,Authorization,Front desk / Authorization,Yes
+GPP-2026-001581,Medical necessity,Coding / Clinical,No
+GPP-2026-001655,Credentialing,Credentialing,Yes
+GPP-2026-001665,Payer error,Denials (appeal),No
+GPP-2026-001712,Coding - modifier,Coding,Yes
+GPP-2026-001741,Billing - timely filing,Billing,Yes
+GPP-2026-001753,Medical necessity,Coding / Clinical,No
+GPP-2026-001799,Coding - diagnosis,Coding,Yes
+GPP-2026-001820,Coding - modifier,Coding,Yes
+GPP-2026-001848,Billing - timely filing,Billing,Yes
+GPP-2026-001893,Payer error,Denials (appeal),No
+GPP-2026-001934,Authorization,Front desk / Authorization,Yes
+GPP-2026-001989,Medical necessity,Coding / Clinical,No
+GPP-2026-002109,Coding - modifier,Coding,Yes
+GPP-2026-002156,Billing - timely filing,Billing,Yes
+GPP-2026-002230,Authorization,Front desk / Authorization,Yes
+GPP-2026-002361,Medical necessity,Coding / Clinical,No
+GPP-2026-002390,Eligibility,Front desk / Eligibility,Yes
+GPP-2026-002467,Coding - frequency,Coding,Yes
+GPP-2026-002469,Coding - frequency,Coding,Yes
+GPP-2026-002470,Coding - frequency,Coding,Yes
+GPP-2026-002474,Coding - frequency,Coding,Yes

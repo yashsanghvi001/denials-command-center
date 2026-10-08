@@ -1,0 +1,38 @@
+services:
+  db:
+    image: postgres:17
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: denials
+      POSTGRES_USER: denials
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-local_dev_only}
+    ports: ["127.0.0.1:5432:5432"]
+    volumes: [pgdata:/var/lib/postgresql/data]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U denials -d denials"]
+      interval: 5s
+      retries: 20
+  api:
+    build: { context: ., dockerfile: src/DenialsCommandCenter.Api/Dockerfile }
+    restart: unless-stopped
+    # Optional settings such as Graph__* and Auth__Emails__* are read straight from .env.
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      # Postgres allows 100 connections; the API keeps at most 50 so admin tools, migrations and a second instance still get in.
+      ConnectionStrings__Denials: Host=db;Database=denials;Username=denials;Password=${POSTGRES_PASSWORD:-local_dev_only};Maximum Pool Size=50;Connection Idle Lifetime=60
+      Ingestion__DataDirectory: /data
+      Gemini__ApiKey: ${Gemini__ApiKey:-}
+      Auth__SeedPassword: ${Auth__SeedPassword:-change-me-locally}
+    volumes: ["./data:/data:ro"]
+    depends_on:
+      db: { condition: service_healthy }
+    ports: ["127.0.0.1:8080:8080"]
+  web:
+    build: { context: web }
+    restart: unless-stopped
+    depends_on: [api]
+    ports: ["127.0.0.1:3000:80"]
+volumes:
+  pgdata:
